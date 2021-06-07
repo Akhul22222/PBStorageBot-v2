@@ -95,7 +95,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"🔰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"⬇️ Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} ⬇️", callback_data="ignore")
         ])
     
     if show_invite and int(index_val) !=0 :
@@ -142,7 +142,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=f"<i>സിനിമയുടെ പേരും എം.പി നോക്കി Click ചെയ്യുക</i> <code>{leng}</code> <i>Results For Your Request 🄿🄱:</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
